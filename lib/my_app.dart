@@ -1,3 +1,4 @@
+import 'package:chatapp/channel_page.dart';
 import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        // home: const MyHomePage(title: 'Chat App'),
+        home: StreamChannel(channel: channel, child: ChannelPage()),
         builder: (context, child) {
           return StreamChat(client: client, child: child);
         });
